@@ -1,4 +1,11 @@
 # milterjs
+
+[![npm version](https://badge.fury.io/js/milterjs.svg)](https://www.npmjs.com/milterjs)
+[![Build Status](https://travis-ci.org/Atlantis-Software/milterjs.svg?branch=master)](https://travis-ci.org/Atlantis-Software/milterjs)
+[![Coverage Status](https://coveralls.io/repos/github/Atlantis-Software/milterjs/badge.svg?branch=master)](https://coveralls.io/github/Atlantis-Software/milterjs?branch=master)
+[![NSP Status](https://nodesecurity.io/orgs/atlantis/projects/513e7252-f706-4b97-992c-3328b4559391/badge)](https://nodesecurity.io/orgs/atlantis/projects/513e7252-f706-4b97-992c-3328b4559391)
+[![Dependencies Status](https://david-dm.org/Atlantis-Software/milterjs.svg)](https://david-dm.org/Atlantis-Software/milterjs)
+
 sendmail milter protocol javscript client library
 
 help you write a sendmail/postfix milter in javascript
@@ -12,7 +19,7 @@ milterjs.on('helo', function(ctx) {
   ctx.continue();
 });
 
-milter.listen(9568, '127.0.0.1');
+milterjs.listen(9568, '127.0.0.1');
 ```
 
 ## METHODS
@@ -38,7 +45,7 @@ Start listening for sendmail/postfix connections on the given port and host.
 | envfrom | ctx, sender | yes | array[0] sender, with <> qualification. array[1] and beyond are ESMTP arguments, if any. |
 | header | ctx, header | no | array[0] header, array[1] value |
 | eoh | ctx | yes | the end of headers. |
-| envrcpt | ctx, recipients | yes | array[0] recipient, with <> qualification. array[1] and beyond are ESMTP arguments, if any. |
+| envrcpt | ctx, recipient | yes | array[0] recipient, with <> qualification. array[1] and beyond are ESMTP arguments, if any. |
 | data | ctx | yes | end of data. |
 | close | ctx | no | close milter connection. |
 | unknown | ctx, command | no | tell the milter that an unknown smtp command has been received. |
